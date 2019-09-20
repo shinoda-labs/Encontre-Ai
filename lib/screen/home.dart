@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:encontre_ai/utils/emrpesas.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,41 +12,59 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        child: Padding(
-          padding: EdgeInsets.only(top: 30.0, left: 10.0, right: 10.0),
-          child: Card(
-            elevation: 6.0,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(5.0))),
-              child: TextField(
-                style: TextStyle(fontSize: 15.0, color: Colors.black),
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                        borderSide: BorderSide(color: Colors.white)),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: 'Procurar Estabelecimento ...',
-                    prefixIcon: Icon(Icons.search, color: Colors.black),
-                    //suffixIcon: Icon(Icons.filter_list, color: Colors.black),
-                    suffix:
-                        FlatButton(child: Text('Pesquisar'), onPressed: () {}),
-                    hintStyle: TextStyle(fontSize: 15.0, color: Colors.black)),
-                maxLines: 1,
-                controller: _searchController,
-              ),
+      appBar: AppBar(
+        elevation: 0.0,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.star),
+            onPressed: () {},
+          )
+        ],
+      ),
+      body: ListView(
+        padding: EdgeInsets.only(left: 20),
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 20),
+            child: Text(
+              "Encontre as\nempresas aqui!",
+              style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
             ),
           ),
-        ),
-        preferredSize: Size(MediaQuery.of(context).size.width, 60.0),
+          SizedBox(height: 20.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                "Empresas em destaque",
+                style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800),
+              ),
+              FlatButton(
+                child: Text(
+                  "Ver todas",
+                  style: TextStyle(color: Theme.of(context).accentColor),
+                ),
+                onPressed: () {},
+              )
+            ],
+          ),
+          SizedBox(height: 10.0),
+          Container(
+            height: MediaQuery.of(context).size.height / 2.4,
+            width: MediaQuery.of(context).size.width,
+            child: ListView.builder(
+              primary: false,
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemCount: empresas == null ? 0 : empresas.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container();
+              },
+            ),
+          ),
+          SizedBox(height: 10.0)
+        ],
       ),
-      body: Container(),
     );
   }
 }
