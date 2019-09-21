@@ -1,3 +1,4 @@
+import 'package:encontre_ai/widgets/slide_item.dart';
 import 'package:flutter/material.dart';
 import 'package:encontre_ai/utils/emrpesas.dart';
 
@@ -7,7 +8,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final TextEditingController _searchController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,16 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               itemCount: empresas == null ? 0 : empresas.length,
               itemBuilder: (BuildContext context, int index) {
-                return Container();
+                Map emp = empresas[index];
+                return Padding(
+                  padding: EdgeInsets.only(right: 10.0),
+                  child: SlideItem(
+                    img: emp["img"],
+                    title: emp["title"],
+                    address: emp["address"],
+                    rating: emp["rating"],
+                  ),
+                );
               },
             ),
           ),

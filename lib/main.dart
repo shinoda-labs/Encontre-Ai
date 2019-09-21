@@ -15,7 +15,7 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  bool isDark = false;
+  bool isDark = true;
 
   @override
   void initState() {
