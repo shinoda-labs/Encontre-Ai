@@ -50,12 +50,11 @@ flutter:
   #  - images/a_dot_burr.jpeg
   assets:
     - assets/food1.jpeg
-    - assets/food2.jpeg
-    - assets/food3.jpeg
-    - assets/food4.jpeg
-    - assets/food5.jpeg
-    - assets/food6.jpeg
-    - assets/food7.jpeg
+    - assets/food1.jpeg
+    - assets/food1.jpeg
+    - assets/food1.jpeg
+    - assets/food1.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
