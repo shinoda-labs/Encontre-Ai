@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:encontre_ai/utils/constants.dart';
 
-class SlideItem extends StatefulWidget {
+class SlideCompanies extends StatefulWidget {
   final String img;
   final String title;
   final String address;
   final String rating;
 
-  SlideItem(
+  SlideCompanies(
       {Key key,
       @required this.img,
       @required this.title,
@@ -16,16 +16,16 @@ class SlideItem extends StatefulWidget {
       : super(key: key);
 
   @override
-  _SlideItemState createState() => _SlideItemState();
+  _SlideCompaniesState createState() => _SlideCompaniesState();
 }
 
-class _SlideItemState extends State<SlideItem> {
+class _SlideCompaniesState extends State<SlideCompanies> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
       child: Container(
-        height: MediaQuery.of(context).size.height / 2.9,
+        height: MediaQuery.of(context).size.height / 2.5,
         width: MediaQuery.of(context).size.width / 1.2,
         child: Card(
           shape:
@@ -110,7 +110,7 @@ class _SlideItemState extends State<SlideItem> {
                   ),
                 ),
               ),
-              SizedBox(height: 5.0)
+              SizedBox(height: 10.0)
             ],
           ),
         ),
