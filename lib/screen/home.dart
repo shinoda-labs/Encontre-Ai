@@ -67,6 +67,7 @@ class _HomeState extends State<Home> {
                     title: emp["title"],
                     address: emp["address"],
                     rating: emp["rating"],
+                    status: emp["status"],
                   ),
                 );
               },

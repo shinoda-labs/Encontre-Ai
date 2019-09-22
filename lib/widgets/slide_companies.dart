@@ -6,13 +6,15 @@ class SlideCompanies extends StatefulWidget {
   final String title;
   final String address;
   final String rating;
+  final int status;
 
   SlideCompanies(
       {Key key,
       @required this.img,
       @required this.title,
       @required this.address,
-      @required this.rating})
+      @required this.rating,
+      @required this.status})
       : super(key: key);
 
   @override
@@ -77,10 +79,12 @@ class _SlideCompaniesState extends State<SlideCompanies> {
                           borderRadius: BorderRadius.circular(3.0)),
                       child: Padding(
                         padding: EdgeInsets.all(4.0),
-                        child: Text("OPEN",
+                        child: Text(widget.status == 1 ? "ABERTO" : "FECHADO",
                             style: TextStyle(
                                 fontSize: 10,
-                                color: Colors.green,
+                                color: widget.status == 1
+                                    ? Colors.green
+                                    : Colors.red,
                                 fontWeight: FontWeight.bold)),
                       ),
                     ),

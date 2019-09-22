@@ -69,7 +69,8 @@ class _CategoriesState extends State<Categories> {
                     img: emp["img"],
                     title: emp["title"],
                     address: emp["address"],
-                    rating: emp["rating"]);
+                    rating: emp["rating"],
+                    status: emp["status"]);
               },
             ),
             SizedBox(height: 10.0)
