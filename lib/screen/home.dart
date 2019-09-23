@@ -1,7 +1,7 @@
 import 'package:encontre_ai/widgets/slide_companies.dart';
 import 'package:encontre_ai/widgets/slide_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:encontre_ai/utils/emrpesas.dart';
+import 'package:encontre_ai/utils/establishment.dart';
 import 'package:encontre_ai/utils/categories.dart';
 
 class Home extends StatefulWidget {
