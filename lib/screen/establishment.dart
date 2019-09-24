@@ -1,4 +1,4 @@
-import 'package:encontre_ai/utils/establishment.dart';
+import 'package:encontre/utils/establishment.dart';
 import 'package:flutter/material.dart';
 
 class Establishment extends StatefulWidget {
@@ -22,6 +22,24 @@ class _EstablishmentState extends State<Establishment> {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.map),
+        onPressed: () {},
+      ),
+      // bottomNavigationBar: Container(
+      //   height: 50,
+      //   child: RaisedButton(
+      //     elevation: 15,
+      //     color: Theme.of(context).primaryColor,
+      //     child: Text(
+      //       "See Availability",
+      //       style: TextStyle(
+      //         color: Theme.of(context).accentColor,
+      //       ),
+      //     ),
+      //     onPressed: () {},
+      //   ),
+      // ),
       body: ListView(
         children: <Widget>[
           SizedBox(height: 10.0),
@@ -50,6 +68,85 @@ class _EstablishmentState extends State<Establishment> {
             ),
           ),
           SizedBox(height: 20),
+          ListView(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            primary: false,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "${empresas[0]["title"]}",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 20.0),
+                        maxLines: 2,
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(3.0)),
+                    child: Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: Text("ABERTO",
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold)),
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.location_on,
+                    color: Colors.blueGrey[300],
+                  ),
+                  SizedBox(width: 3.0),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "${empresas[0]["address"]}",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13.0,
+                          color: Colors.blueGrey[300]),
+                      maxLines: 1,
+                      textAlign: TextAlign.left,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 40.0),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Detalhes",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                  maxLines: 1,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "${empresas[0]["details"]}",
+                  style:
+                      TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 10.0)
+            ],
+          )
         ],
       ),
     );

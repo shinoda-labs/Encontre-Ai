@@ -1,5 +1,5 @@
-import 'package:encontre_ai/screen/home.dart';
-import 'package:encontre_ai/utils/constants.dart';
+import 'package:encontre/screen/home.dart';
+import 'package:encontre/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

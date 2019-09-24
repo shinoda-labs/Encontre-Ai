@@ -1,4 +1,4 @@
-package com.example.encontre_ai
+package com.example.encontre
 
 import android.os.Bundle
 

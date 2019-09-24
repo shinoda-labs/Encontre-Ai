@@ -1,8 +1,8 @@
-import 'package:encontre_ai/widgets/slide_companies.dart';
-import 'package:encontre_ai/widgets/slide_categories.dart';
+import 'package:encontre/widgets/slide_companies.dart';
+import 'package:encontre/widgets/slide_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:encontre_ai/utils/establishment.dart';
-import 'package:encontre_ai/utils/categories.dart';
+import 'package:encontre/utils/establishment.dart';
+import 'package:encontre/utils/categories.dart';
 
 class Home extends StatefulWidget {
   @override

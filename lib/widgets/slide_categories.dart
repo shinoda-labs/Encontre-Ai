@@ -1,4 +1,4 @@
-import 'package:encontre_ai/screen/categories.dart';
+import 'package:encontre/screen/categories.dart';
 import 'package:flutter/material.dart';
 
 class SlideCategories extends StatefulWidget {

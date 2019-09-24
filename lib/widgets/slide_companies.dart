@@ -1,6 +1,6 @@
-import 'package:encontre_ai/screen/establishment.dart';
+import 'package:encontre/screen/establishment.dart';
 import 'package:flutter/material.dart';
-import 'package:encontre_ai/utils/constants.dart';
+import 'package:encontre/utils/constants.dart';
 
 class SlideCompanies extends StatefulWidget {
   final String img;

@@ -1,4 +1,4 @@
-# encontre_ai
+# encontre
 
 A new Flutter project.
 
